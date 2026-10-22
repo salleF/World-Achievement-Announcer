@@ -33,8 +33,9 @@ Piper TTS (engine "piper") - https://github.com/OHF-Voice/piper1-gpl - GPL-3.0
 
 Bundled in the plugin
 ---------------------
-3D bell model and its textures - made by the plugin author.
-Achievement music - made by the plugin author.
+3D bell model and its textures - made by the plugin author, all rights reserved
+  (see LICENSE-ASSETS.txt in the repository; the code itself is MIT).
+Achievement music - temporary placeholder, to be replaced by original music by the author.
 Speech audio is generated on the server at runtime from the texts in config.yml.
 
 Runtime platform (not bundled)

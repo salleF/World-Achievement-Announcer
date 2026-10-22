@@ -1,0 +1,22 @@
+World Achievement Announcer - art and audio assets
+==================================================
+
+The MIT License in LICENSE covers the source code only (Java, Python, JavaScript,
+build files, configuration and language files).
+
+It does NOT cover the art and audio assets below. Unless a file says otherwise,
+they are Copyright (c) 2026 Felipe Ortiz (salleF), all rights reserved:
+
+  src/main/resources/pacote/      3D bell model, textures, item definitions and music
+  ferramentas/modelo/*.png        renders of the bell model
+  ferramentas/modelo/*.gif
+
+You may use these assets only as part of World Achievement Announcer, unmodified,
+on your own Minecraft server. You may not extract, modify, redistribute or sell them
+on their own or in other projects without written permission.
+
+Forks of the code must replace these assets with their own.
+
+Exception: the current achievement music (pacote/assets/sinos/sounds/musica/conquista.ogg)
+is a temporary placeholder by a third party and is not claimed by this notice. It will be
+replaced by original music made by the author.
