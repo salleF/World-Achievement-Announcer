@@ -1,0 +1,245 @@
+# SinosDoMundo - configuração
+
+# Idioma dos menus, mensagens e console: pt-BR ou en (ou um arquivo seu em lang/). No jogo: /sinos idioma.
+idioma: pt-BR
+
+# Confere uma vez ao ligar se saiu versão nova (lê um arquivo de texto público; nada é enviado).
+# Os admins são avisados no console e ao entrar.
+verificar-atualizacoes: true
+
+sino:
+  # Todo jogador fica a no máximo esta distância (em blocos) do sino do seu grupo.
+  raio-grupo: 24.0
+  # Quanto tempo o sino fica no mundo, em segundos (ele espera a voz terminar, se for mais longa).
+  duracao-segundos: 8
+  # Altura do sino acima da altura média do grupo.
+  altura-acima: 4.0
+  # Jogador sozinho: o sino aparece à frente dele, nesta distância e altura (acima dos olhos).
+  sozinho-distancia: 5.0
+  sozinho-altura: 3.0
+  # O sino acompanha o grupo enquanto estiver no mundo.
+  seguir-grupo: true
+  # Tamanho do sino.
+  escala: 2.0
+  # Item mostrado. modelo-3d usa o sino 3D do pacote do plugin; sem o pacote, aparece o sino comum.
+  item: BELL
+  modelo-3d: true
+  # Para usar um modelo de outro resource pack, informe o item_model dele (ex.: "meupack:sino").
+  item-model: ""
+  # Quantas batidas do badalo e quantos ticks entre uma batida e a próxima (20 ticks = 1 segundo).
+  # O ângulo da batida vem do modelo: peças com nome começando por "badalo" formam o badalo.
+  badaladas: 3
+  intervalo-badaladas: 8
+  # Ritmo: tick de cada batida, contado a partir do momento em que o sino aparece. Quando preenchido,
+  # substitui badaladas e intervalo-badaladas. Estes valores seguem os ataques da música padrão.
+  # Para trocar de música, meça os ataques dela e ajuste aqui e em musica.inicio-ticks. Vazio = [].
+  ritmo: [17, 27, 37, 46, 53, 60, 66]
+  # Sons tocados a cada badalada. Sons de resource pack funcionam (ex.: "sinos:conquista").
+  sons:
+    - "minecraft:block.bell.use"
+  som-final: "minecraft:block.bell.resonate"
+  volume: 1.0
+  tom: 0.8
+  # Espectadores recebem só a mensagem no chat.
+  ignorar-espectadores: true
+
+texto:
+  # Linhas mostradas acima do sino. <conquista> e <jogadores> são substituídos.
+  linhas:
+    - "<gold><bold>CONQUISTA MUNDIAL</bold></gold>"
+    - "<white><conquista></white>"
+    - "<gray>Concluída por: <yellow><jogadores></yellow></gray>"
+    - "<gray><italic><final></italic></gray>"
+  altura-acima-do-sino: 1.6
+  # Como os nomes são juntados no texto: "A, B e C" e, passando do limite, "e mais 3".
+  conector: "e"
+  e-mais: "e mais {0}"
+  # Mensagem enviada no chat para todos os jogadores online.
+  chat:
+    - "<gold>[Sino]</gold> <white><conquista></white> <gray>- concluída por</gray> <yellow><jogadores></yellow>"
+
+voz:
+  # A voz é gerada localmente (texto-para-fala). Requisitos na máquina do servidor:
+  #   Python 3 com: pip install kokoro-onnx soundfile numpy  (e piper-tts, se usar vozes Piper)
+  #   os arquivos de voz em plugins/SinosDoMundo/vozes (veja voz.narradores)
+  # Sem Python, o plugin funciona normalmente sem a voz (sino, música e texto).
+  ativada: true
+  # Comando do Python que tem os pacotes instalados.
+  python: "python"
+  # Narrador ativo. Troque no jogo com /sinos narrador <nome>.
+  narrador: alex
+  # Narradores disponíveis. motor kokoro usa kokoro-modelo + kokoro-vozes e uma voz ou mistura de vozes
+  # ("pf_dora:0.6,if_sara:0.4"); motor piper usa um modelo .onnx próprio (+ .onnx.json ao lado).
+  # Antes de usar uma voz Piper num servidor comercial, confira a licença dela (várias derivam de bases só
+  # para pesquisa). As vozes Kokoro abaixo são Apache 2.0. idioma: pronúncia (pt-br, en-us, en-gb).
+  narradores:
+    alex:
+      tipo: masculino
+      motor: kokoro
+      voz: pm_alex
+      idioma: pt-br
+    santa:
+      tipo: masculino
+      motor: kokoro
+      voz: pm_santa
+      idioma: pt-br
+    dora:
+      tipo: feminino
+      motor: kokoro
+      voz: pf_dora
+      idioma: pt-br
+    clara:
+      tipo: feminino
+      motor: kokoro
+      voz: "pf_dora:0.6,if_sara:0.4"
+      idioma: pt-br
+    sol:
+      tipo: neutro
+      motor: kokoro
+      voz: "pf_dora:0.5,pm_alex:0.5"
+      idioma: pt-br
+    # Narradores em inglês (para anúncios em inglês)
+    michael:
+      tipo: masculino
+      motor: kokoro
+      voz: am_michael
+      idioma: en-us
+    george:
+      tipo: masculino
+      motor: kokoro
+      voz: bm_george
+      idioma: en-gb
+    heart:
+      tipo: feminino
+      motor: kokoro
+      voz: af_heart
+      idioma: en-us
+    emma:
+      tipo: feminino
+      motor: kokoro
+      voz: bf_emma
+      idioma: en-gb
+    river:
+      tipo: neutro
+      motor: kokoro
+      voz: "af_heart:0.5,am_michael:0.5"
+      idioma: en-us
+  kokoro-modelo: vozes/kokoro-v1.0.int8.onnx
+  kokoro-vozes: vozes/voices-v1.0.bin
+  # Frase falada. {conquista}, {jogadores} e {final} são substituídos. Cada conquista pode ter a sua (campo "frase").
+  frase: "Alerta, alerta! {conquista}. Seus contribuidores foram {jogadores}. {final}"
+  # Palavras faladas ao juntar os nomes: "A, B e C" e, passando do limite, "e outros jogadores".
+  conector: "e"
+  e-outros: "e outros jogadores"
+  # Frases finais sorteadas quando a conquista usa final: aleatoria (o padrão).
+  finais:
+    - "Essa conquista vai causar grande impacto no mundo."
+    - "Parabéns aos participantes!"
+    - "O mundo nunca mais será o mesmo."
+    - "Que seus nomes sejam lembrados para sempre."
+    - "Os sinos ecoam em sua honra."
+    - "Uma nova lenda acaba de nascer."
+    - "A história deste mundo acaba de ser reescrita."
+    - "Este feito será lembrado por gerações."
+    - "Todos devem saudar os vencedores."
+    - "Que venham os próximos desafios."
+  # Palavras avulsas para textos sem áudio próprio (falados palavra por palavra).
+  palavras-comuns: [o, a, boss, foi, morto, morta, derrotado, derrotada, primeiro, primeira, conquista, mundial, teste]
+  # Ticks entre a última batida do sino e o começo da fala (20 ticks = 1 segundo).
+  # 20 deixa a fala entrar quando a fanfarra da música padrão começa a baixar.
+  atraso-ticks: 20
+
+musica:
+  # Música da conquista, tocada junto do jogador (só para quem tem o pacote).
+  ativada: true
+  # Tick (contado a partir do momento em que o sino aparece) em que a música começa.
+  inicio-ticks: 1
+  # Música própria em uso (escolhida em /sinos > Música). Vazio = música padrão do plugin.
+  arquivo: ""
+  # Para usar outra música, coloque um .ogg mono em plugins/SinosDoMundo/musica/conquista.ogg.
+  volume: 0.45
+
+pacote:
+  # O plugin monta um resource pack (sino 3D, voz e música) em plugins/SinosDoMundo/pacote.zip.
+  ativado: true
+  # proprio: o plugin serve o pacote por HTTP na porta abaixo (precisa estar liberada na hospedagem).
+  # externo: você hospeda o pacote.zip em outro lugar (site, GitHub, Dropbox com link direto) e informa
+  #   o endereço em url-externa. Use quando a hospedagem só libera a porta do jogo. Sempre que o pacote
+  #   mudar (texto novo, narrador novo, jogador novo), envie o pacote.zip de novo; o console avisa.
+  modo: proprio
+  url-externa: ""
+  porta: 8164
+  # Endereço que os jogadores usam para baixar o pacote. Vazio = http://<server-ip>:<porta>.
+  # Em rede local, informe o IP da máquina (ex.: "http://192.168.0.16:8164").
+  url-publica: ""
+  obrigatorio: false
+  mensagem: "<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios."
+
+contribuidores:
+  # dano: quem causou dano no mob; presenca: quem estava perto quando ele morreu; ambos: os dois.
+  modo: dano
+  # Conta quem causou pelo menos esta porcentagem do dano total OU este dano absoluto.
+  dano-minimo-porcentagem: 2.0
+  dano-minimo: 10.0
+  # Só conta dano causado nestes últimos minutos antes da morte.
+  janela-minutos: 5
+  # Distância (blocos) para o modo presenca.
+  raio-presenca: 64.0
+  # Jogadores no criativo ou espectador não contam.
+  ignorar-criativo: true
+  # A voz fala até este número de nomes e completa com "e outros jogadores".
+  max-nomes-voz: 5
+  # O texto do sino mostra até este número de nomes e completa com "e mais N".
+  max-nomes-texto: 10
+  # Primeira entrada numa dimensão: espera estes segundos para incluir quem entrou junto.
+  janela-dimensao-segundos: 5
+
+# Conquistas. Gatilhos:
+#   MATAR_MOB    primeira morte de um tipo de mob (campo mob, ex.: ENDER_DRAGON)
+#   MOB_MARCADO  morte de um mob marcado com /sinos marcar <id>
+#   CONQUISTA    advancement do jogo (campo conquista, ex.: minecraft:end/kill_dragon)
+#   DIMENSAO     primeira entrada num mundo (campo mundo, ex.: world_nether)
+#   MANUAL       só por /sinos anunciar ou pela API
+# nome: texto do sino e do chat (MiniMessage). voz: texto falado no lugar de {conquista}.
+# uma-vez: true = só a primeira vez no servidor.
+# final: aleatoria (sorteia de voz.finais, o padrão), nenhuma, ou uma frase própria.
+# narrador: opcional, um dos voz.narradores (vazio = narrador ativo).
+conquistas:
+  primeiro-dragao:
+    gatilho: MATAR_MOB
+    mob: ENDER_DRAGON
+    uma-vez: true
+    nome: "<light_purple>O Ender Dragon foi derrotado</light_purple>"
+    voz: "O boss Ender Dragon foi morto"
+    final: "O fim deixou de ser o fim."
+  primeiro-wither:
+    gatilho: MATAR_MOB
+    mob: WITHER
+    uma-vez: true
+    nome: "<dark_gray>O Wither foi derrotado</dark_gray>"
+    voz: "O boss Wither foi derrotado"
+  primeiro-warden:
+    gatilho: MATAR_MOB
+    mob: WARDEN
+    uma-vez: true
+    nome: "<dark_aqua>O Warden foi derrotado</dark_aqua>"
+    voz: "O Warden foi derrotado pela primeira vez"
+  primeiros-no-nether:
+    gatilho: DIMENSAO
+    mundo: world_nether
+    uma-vez: true
+    nome: "<red>Os primeiros a pisar no Nether</red>"
+    voz: "Os primeiros jogadores pisaram no Nether"
+    frase: "Alerta, alerta! {conquista}. Foram eles: {jogadores}. {final}"
+  primeiros-no-end:
+    gatilho: DIMENSAO
+    mundo: world_the_end
+    uma-vez: true
+    nome: "<yellow>Os primeiros a chegar ao End</yellow>"
+    voz: "Os primeiros jogadores chegaram ao End"
+    frase: "Alerta, alerta! {conquista}. Foram eles: {jogadores}. {final}"
+  boss-de-evento:
+    gatilho: MOB_MARCADO
+    uma-vez: false
+    nome: "<gold>O boss do evento caiu</gold>"
+    voz: "O boss do evento foi derrotado"

@@ -1,0 +1,19 @@
+name: SinosDoMundo
+version: '${version}'
+main: br.sinosdomundo.SinosDoMundo
+description: World achievements announced by a 3D bell that rings over each group of players, with music and a spoken voice.
+authors: [CainYW]
+api-version: '1.21.4'
+folia-supported: false
+
+commands:
+  sinos:
+    description: Opens the SinosDoMundo panel and admin commands.
+    usage: /sinos (opens the panel) or /sinos <teste|anunciar|marcar|desmarcar|resetar|lista|narrador|instalar-voz|idioma|reload>
+    aliases: [bells]
+    permission: sinos.admin
+
+permissions:
+  sinos.admin:
+    description: Full access to the panel and admin commands; also receives update notices.
+    default: op

@@ -1,0 +1,247 @@
+# SinosDoMundo (World Bells) - configuration
+# Config keys are in Portuguese; the comments explain each one. Most of this can be edited in game with /sinos.
+
+# Language of menus, messages and console: en or pt-BR (or your own file in lang/). In game: /sinos idioma.
+idioma: en
+
+# Checks once at startup whether a new version is out (reads a public text file; nothing is sent).
+# Admins are told in the console and when they join.
+verificar-atualizacoes: true
+
+sino:
+  # Every player stays at most this distance (in blocks) from their group's bell.
+  raio-grupo: 24.0
+  # How long the bell stays in the world, in seconds (it waits for the voice if the voice is longer).
+  duracao-segundos: 8
+  # Bell height above the group's average height.
+  altura-acima: 4.0
+  # Player alone: the bell appears in front of them, at this distance and height (above the eyes).
+  sozinho-distancia: 5.0
+  sozinho-altura: 3.0
+  # The bell follows the group while it is in the world.
+  seguir-grupo: true
+  # Bell size.
+  escala: 2.0
+  # Item shown. modelo-3d uses the plugin pack's 3D bell; without the pack, the regular bell shows.
+  item: BELL
+  modelo-3d: true
+  # To use a model from another resource pack, give its item_model (e.g. "mypack:bell").
+  item-model: ""
+  # How many clapper strikes and how many ticks between strikes (20 ticks = 1 second).
+  # The strike angle comes from the model: parts whose name starts with "badalo" form the clapper.
+  badaladas: 3
+  intervalo-badaladas: 8
+  # Rhythm: tick of each strike, counted from when the bell appears. When set, it replaces
+  # badaladas and intervalo-badaladas. These values follow the beats of the default music.
+  # To change the music, measure its beats (/sinos > Music does it) and adjust here. Empty = [].
+  ritmo: [17, 27, 37, 46, 53, 60, 66]
+  # Sounds played on each strike. Resource pack sounds work (e.g. "sinos:achievement").
+  sons:
+    - "minecraft:block.bell.use"
+  som-final: "minecraft:block.bell.resonate"
+  volume: 1.0
+  tom: 0.8
+  # Spectators only get the chat message.
+  ignorar-espectadores: true
+
+texto:
+  # Lines shown above the bell. <achievement>, <players> and <closing> are replaced.
+  linhas:
+    - "<gold><bold>WORLD ACHIEVEMENT</bold></gold>"
+    - "<white><achievement></white>"
+    - "<gray>Completed by: <yellow><players></yellow></gray>"
+    - "<gray><italic><closing></italic></gray>"
+  altura-acima-do-sino: 1.6
+  # How names are joined in the text: "A, B and C" and, past the limit, "and 3 more".
+  conector: "and"
+  e-mais: "and {0} more"
+  # Message sent in chat to every online player.
+  chat:
+    - "<gold>[Bell]</gold> <white><achievement></white> <gray>- completed by</gray> <yellow><players></yellow>"
+
+voz:
+  # The voice is generated locally (text-to-speech). Requirements on the server machine:
+  #   Python 3 with: pip install kokoro-onnx soundfile numpy  (and piper-tts, if you use Piper voices)
+  #   the voice files in plugins/SinosDoMundo/vozes (see voz.narradores)
+  # /sinos > Voice and narrator > Guided installation (or /sinos instalar-voz) does all of this for you.
+  # Without Python, the plugin works normally without voice (bell, music and text).
+  ativada: true
+  # Command of the Python that has the packages installed.
+  python: "python"
+  # Active narrator. Change it in game with /sinos narrador <name>.
+  narrador: michael
+  # Available narrators. engine (motor) kokoro uses kokoro-modelo + kokoro-vozes and one voice or a mix of
+  # voices ("af_heart:0.5,am_michael:0.5"); engine piper uses its own .onnx model (+ .onnx.json next to it).
+  # Before using a Piper voice on a commercial server, check its license (several come from research-only
+  # datasets). The Kokoro voices below are Apache 2.0. idioma: pronunciation (en-us, en-gb, pt-br).
+  # tipo: masculino (male), feminino (female) or neutro (neutral), shown in the menu.
+  narradores:
+    michael:
+      tipo: masculino
+      motor: kokoro
+      voz: am_michael
+      idioma: en-us
+    george:
+      tipo: masculino
+      motor: kokoro
+      voz: bm_george
+      idioma: en-gb
+    heart:
+      tipo: feminino
+      motor: kokoro
+      voz: af_heart
+      idioma: en-us
+    emma:
+      tipo: feminino
+      motor: kokoro
+      voz: bf_emma
+      idioma: en-gb
+    river:
+      tipo: neutro
+      motor: kokoro
+      voz: "af_heart:0.5,am_michael:0.5"
+      idioma: en-us
+    # Brazilian Portuguese narrators (for announcements in Portuguese)
+    alex:
+      tipo: masculino
+      motor: kokoro
+      voz: pm_alex
+      idioma: pt-br
+    santa:
+      tipo: masculino
+      motor: kokoro
+      voz: pm_santa
+      idioma: pt-br
+    dora:
+      tipo: feminino
+      motor: kokoro
+      voz: pf_dora
+      idioma: pt-br
+    clara:
+      tipo: feminino
+      motor: kokoro
+      voz: "pf_dora:0.6,if_sara:0.4"
+      idioma: pt-br
+    sol:
+      tipo: neutro
+      motor: kokoro
+      voz: "pf_dora:0.5,pm_alex:0.5"
+      idioma: pt-br
+  kokoro-modelo: vozes/kokoro-v1.0.int8.onnx
+  kokoro-vozes: vozes/voices-v1.0.bin
+  # Spoken phrase. {achievement}, {players} and {closing} are replaced. Each achievement can have its own (field "frase").
+  frase: "Attention, attention! {achievement}. Its contributors were {players}. {closing}"
+  # Words spoken when joining names: "A, B and C" and, past the limit, "and other players".
+  conector: "and"
+  e-outros: "and other players"
+  # Closing lines picked at random when the achievement uses final: aleatoria (the default).
+  finais:
+    - "This achievement will make a great impact on the world."
+    - "Congratulations to everyone involved!"
+    - "The world will never be the same."
+    - "May their names be remembered forever."
+    - "The bells ring in their honor."
+    - "A new legend has just been born."
+    - "The history of this world has just been rewritten."
+    - "This feat will be remembered for generations."
+    - "Everyone, salute the victors."
+    - "Bring on the next challenges."
+  # Loose words for texts without their own audio (spoken word by word).
+  palavras-comuns: [the, a, boss, was, has, been, killed, defeated, first, achievement, world, test]
+  # Ticks between the bell's last strike and the start of the speech (20 ticks = 1 second).
+  # 20 lets the speech come in when the default music's fanfare starts to fade.
+  atraso-ticks: 20
+
+musica:
+  # Achievement music, played with the player (only for players who have the pack).
+  ativada: true
+  # Tick (counted from when the bell appears) when the music starts.
+  inicio-ticks: 1
+  # Your own music in use (chosen in /sinos > Music). Empty = the plugin's default music.
+  arquivo: ""
+  volume: 0.45
+
+pacote:
+  # The plugin builds a resource pack (3D bell, voice and music) in plugins/SinosDoMundo/pacote.zip.
+  ativado: true
+  # proprio: the plugin serves the pack over HTTP on the port below (it must be open on your host).
+  # externo: you host pacote.zip somewhere else (website, GitHub, Dropbox direct link) and give the
+  #   address in url-externa. Use it when your host only opens the game port. Whenever the pack
+  #   changes (new text, new narrator, new player), upload pacote.zip again; the console tells you.
+  modo: proprio
+  url-externa: ""
+  porta: 8164
+  # Address players use to download the pack. Empty = http://<server-ip>:<port>.
+  # On a local network, give the machine's IP (e.g. "http://192.168.0.16:8164").
+  url-publica: ""
+  obrigatorio: false
+  mensagem: "<gold>SinosDoMundo pack</gold>: 3D bell and announcement voice."
+
+contribuidores:
+  # dano: who damaged the mob; presenca: who was near when it died; ambos: both.
+  modo: dano
+  # Counts who dealt at least this share of the total damage OR this absolute damage.
+  dano-minimo-porcentagem: 2.0
+  dano-minimo: 10.0
+  # Only damage dealt in these last minutes before the death counts.
+  janela-minutos: 5
+  # Distance (blocks) for the presenca mode.
+  raio-presenca: 64.0
+  # Players in creative or spectator do not count.
+  ignorar-criativo: true
+  # The voice says up to this many names and adds "and other players".
+  max-nomes-voz: 5
+  # The bell text shows up to this many names and adds "and N more".
+  max-nomes-texto: 10
+  # First entry into a dimension: waits this many seconds to include whoever came along.
+  janela-dimensao-segundos: 5
+
+# Achievements. Triggers (gatilho):
+#   MATAR_MOB    first death of a mob type (field mob, e.g. ENDER_DRAGON)
+#   MOB_MARCADO  death of a mob marked with /sinos marcar <id>
+#   CONQUISTA    game advancement (field conquista, e.g. minecraft:end/kill_dragon)
+#   DIMENSAO     first entry into a world (field mundo, e.g. world_nether)
+#   MANUAL       only via /sinos anunciar or the API
+# nome: bell and chat text (MiniMessage). voz: text spoken in place of {achievement}.
+# uma-vez: true = only the first time on the server.
+# final: aleatoria (random from voz.finais, the default), nenhuma (none), or a custom line.
+# narrador: optional, one of voz.narradores (empty = active narrator).
+conquistas:
+  first-dragon:
+    gatilho: MATAR_MOB
+    mob: ENDER_DRAGON
+    uma-vez: true
+    nome: "<light_purple>The Ender Dragon has fallen</light_purple>"
+    voz: "The Ender Dragon boss has been slain"
+    final: "The end is no longer the end."
+  first-wither:
+    gatilho: MATAR_MOB
+    mob: WITHER
+    uma-vez: true
+    nome: "<dark_gray>The Wither has been defeated</dark_gray>"
+    voz: "The Wither boss has been defeated"
+  first-warden:
+    gatilho: MATAR_MOB
+    mob: WARDEN
+    uma-vez: true
+    nome: "<dark_aqua>The Warden has been defeated</dark_aqua>"
+    voz: "The Warden has been defeated for the first time"
+  first-in-nether:
+    gatilho: DIMENSAO
+    mundo: world_nether
+    uma-vez: true
+    nome: "<red>The first to set foot in the Nether</red>"
+    voz: "The first players have set foot in the Nether"
+    frase: "Attention, attention! {achievement}. They were {players}. {closing}"
+  first-in-end:
+    gatilho: DIMENSAO
+    mundo: world_the_end
+    uma-vez: true
+    nome: "<yellow>The first to reach the End</yellow>"
+    voz: "The first players have reached the End"
+    frase: "Attention, attention! {achievement}. They were {players}. {closing}"
+  event-boss:
+    gatilho: MOB_MARCADO
+    uma-vez: false
+    nome: "<gold>The event boss has fallen</gold>"
+    voz: "The event boss has been defeated"

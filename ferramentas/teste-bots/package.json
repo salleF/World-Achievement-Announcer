@@ -1,0 +1,12 @@
+{
+  "name": "teste-bots-sinos",
+  "private": true,
+  "description": "Bots que entram no servidor local e conferem os sinos do SinosDoMundo",
+  "scripts": {
+    "grupo": "node teste.js grupo",
+    "fila": "node teste.js fila"
+  },
+  "dependencies": {
+    "mineflayer": "^4.39.0"
+  }
+}

@@ -1,0 +1,700 @@
+SinosDoMundo não está ativo
+por=
+Conquista de teste
+Anúncio de teste disparado.
+Essa conquista já foi concluída. Use /sinos resetar 
+Conquista anunciada.
+O anúncio foi cancelado por outro plugin.
+Só jogadores podem marcar mobs.
+Olhe para um mob a até 
+Mob marcado: quando ele morrer, a conquista 
+ toca o sino.
+Só jogadores podem desmarcar mobs.
+Marca removida.
+Esse mob não tem marca.
+Conquista liberada de novo.
+Essa conquista ainda não foi concluída.
+Nenhuma conquista no config.
+concluída por 
+disponível
+uma vez
+Narrador ativo: 
+. Disponíveis:
+ [arquivos de voz não encontrados]
+Narrador não encontrado: 
+. Veja com /sinos narrador.
+Gerando as falas do narrador 
+Narrador trocado para 
+. O pacote foi reenviado para quem está online.
+Instalação da voz: procura o Python, cria um ambiente Python em 
+faltarem) e baixa os modelos do Kokoro (uns 120 MB, se faltarem).
+Para continuar: /sinos instalar-voz confirmar
+Já tem uma instalação em andamento.
+Idioma atual: 
+. Use /sinos idioma pt-BR ou /sinos idioma en 
+(ou o nome de um arquivo da pasta lang).
+Idioma dos menus e mensagens: 
+. Os textos dos anúncios ficam no config.yml.
+Config do SinosDoMundo recarregado.
+Informe o id da conquista. Veja com /sinos lista.
+Conquista não encontrada: 
+pt-BR
+e mais {0}
+Som inválido no config: 
+Conquista 
+: gatilho inválido 
+: falta o alvo do gatilho 
+Não foi possível salvar concluidas.yml: 
+<gold>Sino
+<gray>Linha 2: aparência
+<gray>Linha 3: tempo e batidas
+<gray>Linha 4: sons
+<gray>Linha 5: texto
+<yellow>Tamanho
+<gray>Escala do sino 3D.
+<yellow>Altura acima do grupo
+<gray>Blocos acima da altura média do grupo.
+<yellow>Distância (jogador sozinho)
+<gray>Blocos à frente de onde ele olha.
+<yellow>Altura (jogador sozinho)
+<gray>Blocos acima dos olhos.
+<yellow>Sino 3D do pacote
+<gray>Desligado, aparece o sino comum do jogo.
+<yellow>Seguir o grupo
+<gray>O sino acompanha os jogadores enquanto toca.
+<yellow>Raio do grupo
+<gray>Jogadores a até esta distância
+<gray>dividem o mesmo sino.
+<yellow>Duração mínima (s)
+<gray>O sino espera a fala terminar se ela for mais longa.
+<yellow>Batidas
+ <dark_gray>(ritmo ativo)
+<gray>Ignorado enquanto houver ritmo.
+<gray>Quantas vezes o badalo bate.
+<yellow>Intervalo entre batidas
+<gray>Em ticks (20 = 1 segundo).
+<yellow>Ritmo das batidas
+<green>Ativo: 
+<gray>Desligado
+<gray>Batidas em momentos escolhidos, para
+<gray>seguir a música.
+<yellow>Clique para editar
+<green>Testar o sino
+<gray>Toca um anúncio só para você.
+<yellow>Sons de cada batida
+<gold>Sons da batida
+<yellow>Som final
+Som tocado na última batida (ex.: minecraft:block.bell.resonate):
+<gray>Toca junto da última batida.
+<yellow>Volume
+<gray>Fica mais alto sozinho se o raio do grupo exigir.
+<yellow>Tom
+<gray>1 = normal, menor = mais grave.
+<yellow>Ignorar espectadores
+<gray>Espectadores só recebem a mensagem no chat.
+<yellow>Linhas acima do sino
+<gray>Use &lt;conquista&gt;, &lt;jogadores&gt; e &lt;final&gt;.
+<gold>Linhas acima do sino
+<gold><bold>CONQUISTA MUNDIAL
+<yellow>Mensagem no chat
+<gray>Enviada a todos quando o sino toca.
+<gold>Mensagem no chat
+<gold>[Sino]</gold> <conquista>
+<yellow>Altura do texto
+<gray>Blocos acima do sino.
+<yellow>Atualizando o seu pacote. Teste de novo em alguns segundos.
+<aqua>Teste do sino
+<gold>[Sinos]</gold> 
+<gray>Valor atual: <white>
+<gray>Digite no chat, ou <red>cancelar</red> para desistir.
+<gray>Cancelado.
+<yellow>Página anterior
+<yellow>Próxima página
+<green>Confirmar
+<red>Cancelar
+<gold>Conquista: 
+<red>Conquista não encontrada
+<gray>Ela pode ter sido apagada.
+<gray>Aparece no sino e no chat. Aceita cores
+<gray>MiniMessage, ex.: <gold>&lt;gold&gt;texto
+<yellow>Nome mostrado
+Nome mostrado da conquista:
+<yellow>Gatilho: <white>
+<yellow>Clique para trocar
+<red>Vazio: a voz não fala o nome da conquista
+<gray>O que a voz fala no lugar de {conquista}.
+<yellow>Texto falado
+Texto que a voz fala para esta conquista:
+<white>Usando a frase padrão
+<gray>Use {conquista}, {jogadores} e {final}.
+<yellow>Clique para editar <gray>(digite <white>padrao</white> para voltar à padrão)
+<yellow>Frase própria
+Frase falada desta conquista (ou <white>padrao</white>):
+Frase final própria desta conquista:
+o ativo (
+<yellow>Narrador: <white>
+<gray>Voz que narra só esta conquista.
+<yellow>Clique para escolher
+<yellow>Só uma vez no servidor
+<gray>Ligado: depois de concluída, não toca mais
+<gray>(até ser resetada).
+<green>Testar aqui
+<gray>Toca o anúncio só para você, com o seu
+<gray>nome. Não conclui a conquista.
+<green>Marcar o mob que estou olhando
+<gray>Quando ele morrer, esta conquista toca
+<gray>com quem ajudou a matar. Olhe para o mob
+<gray>(até 20 blocos) e clique.
+<gold>Resetar conclusão
+<gray>Libera a conquista para tocar de novo.
+<gray>Ainda não foi concluída.
+Resetar 
+A conquista volta a ficar disponível. Quem concluiu antes é esquecido.
+<red>Apagar conquista
+<gray>Remove do config. Não tem volta.
+Apagar 
+A conquista some do config.yml e o registro de quem concluiu é apagado.
+<gray>Gerando os áudios novos...
+<green>Áudios prontos.</green> <gray>Quem está online ouve depois que o pacote 
+for reenviado (Ferramentas > Reenviar pacote).
+<gold>Gatilho
+<gold>Qual mob?
+<gold>Qual advancement?
+<gold>Qual mundo?
+<gray>Esse gatilho não usa alvo.
+<yellow>Usar o narrador ativo
+<gray>Agora: 
+<gold>Narrador
+<yellow>Atualizando o seu pacote para ouvir os áudios novos. 
+Teste de novo em alguns segundos.
+<red>Olhe para um mob a até 20 blocos e clique de novo.
+<green>Mob marcado.</green> <gray>Quando ele morrer, 
+<yellow>Mob: <white>
+<gray>A primeira morte deste mob dispara.
+<yellow>Advancement: <white>
+<gray>Quem completar este advancement dispara.
+<yellow>Mundo: <white>
+<gray>A primeira entrada neste mundo dispara.
+<gray>Alvo: não usa
+<gray>Este gatilho não precisa de alvo.
+sorteada da lista
+própria
+<gray>Frase dita depois dos nomes.
+<yellow>Esquerdo: <gray>sorteada / nenhuma
+<yellow>Direito: <gray>escrever uma frase própria
+<yellow>Frase final: <white>
+<gray>Gatilho: <white>
+<gray>Só uma vez: <white>
+não
+<gray>Narrador: <white>
+o ativo
+<green>Concluída por: <white>
+<yellow>Disponível
+Matar mob
+Mob marcado
+Advancement
+Entrar num mundo
+Manual
+A primeira morte de um tipo de mob.
+Morte de um mob marcado (Marcar mob).
+Alguém completa um advancement do jogo.
+A primeira entrada num mundo (Nether, End...).
+Só por /sinos anunciar ou pela API.
+(nenhum)
+Todas
+Disponíveis
+Concluídas
+<gold>Conquistas
+<gray>Nenhuma conquista aqui
+<gray>Use o botão Criar conquista.
+<yellow>Filtro: 
+<gray>Clique para trocar entre
+<gray>todas, disponíveis e concluídas.
+<green>Criar conquista
+<gray>Você escolhe um id (ex.: primeiro-golem)
+<gray>e depois edita o resto no editor.
+Id da nova conquista (letras minúsculas, números e hífen, ex.: <white>primeiro-golem</white>):
+<red>Id inválido. Use só letras minúsculas, números, - e _.
+<red>Já existe uma conquista com esse id.
+<green>Conquista criada. Agora ajuste o gatilho, o nome e a voz.
+<red>Contribuidores
+<gray>Quem aparece como autor quando um mob
+<gray>de conquista morre, e quantos nomes
+<gray>são falados e mostrados.
+presença (quem estava perto)
+dano + presença
+dano (quem bateu no mob)
+<yellow>Modo: <white>
+<gray>dano: quem causou dano suficiente
+<gray>presença: quem estava perto na morte
+<gray>ambos: qualquer um dos dois
+<yellow>Dano mínimo (%)
+<gray>Porcentagem do dano total para contar.
+<yellow>Dano mínimo
+<gray>Ou este dano absoluto (basta um dos dois).
+<yellow>Janela (minutos)
+<gray>Só conta dano destes últimos minutos.
+<yellow>Raio de presença
+<gray>Blocos, para os modos presença e ambos.
+<yellow>Ignorar criativo e espectador
+<gray>Jogadores nesses modos não contam.
+<yellow>Nomes falados
+<gray>Depois disso, a voz diz "e outros jogadores".
+<yellow>Nomes no texto
+<gray>Depois disso, o texto diz "e mais N".
+<yellow>Janela da dimensão (s)
+<gray>Primeira entrada num mundo: quem entrar
+<gray>nestes segundos também conta.
+<aqua>Instalação da voz
+<gold>Instalação em andamento... acompanhe no chat.
+<green>A voz está funcionando.
+<gold>A voz ainda não funciona.
+<gray>Siga os passos da esquerda para a direita,
+<gray>ou use <white>Fazer tudo</white> embaixo.
+<gray>Sem Python, o plugin funciona sem a voz.
+<aqua>Instalação guiada
+<yellow>1. Python
+<gray>Comando: <white>
+<gray>Sem Python? Instale o Python 3.10+
+<gray>(python.org, ou python3 no Linux).
+<yellow>Clique para procurar de novo
+Procurando o Python...
+<red>Nenhum Python encontrado.</red> Instale o Python 3.10+ e clique de novo.
+<green>Python encontrado:</green> 
+<green>kokoro-onnx, soundfile e numpy instalados
+<red>Faltam módulos do Python
+<gray>Instala num ambiente só do plugin:
+<white>plugins/SinosDoMundo/python-env
+<gray>(baixa uns 150 MB da internet, PyPI)
+<yellow>Clique para instalar
+<gray>Faça o passo 1 antes
+<yellow>2. Módulos
+<red>Faça o passo 1 antes (Python).
+Instalar os módulos?
+Cria o ambiente Python do plugin e baixa 
+kokoro-onnx, soundfile e numpy (uns 150 MB). Pode levar alguns minutos.
+<red>Falhou:</red> 
+<green>Módulos instalados.</green> Agora o passo 3.
+<yellow>3. Modelos de voz
+<green>Modelos do Kokoro encontrados
+<red>Modelos do Kokoro não encontrados
+<gray>Baixa 
+ MB do GitHub para
+<white>plugins/SinosDoMundo/vozes
+<gray>e confere cada arquivo (SHA-256).
+<gray>Nada a fazer
+<yellow>Clique para baixar
+Baixar os modelos?
+Baixa 
+ MB do GitHub 
+(thewh1teagle/kokoro-onnx) para plugins/SinosDoMundo/vozes.
+<green>Modelos prontos.</green> Agora o passo 4.
+<yellow>4. Gerar falas e testar
+<gray>Gera as falas do narrador ativo e toca
+<gray>uma amostra só para você.
+<yellow>Clique para gerar e ouvir
+<gray>Faça os passos anteriores
+<red>Ainda falta:</red> 
+um narrador
+Gerando as falas...
+<yellow>Falas geradas. Aceite o pacote para ouvir a amostra.
+<green>Fazer tudo
+<gray>Faz os 4 passos em sequência e mostra
+<gray>o progresso no chat.
+Instalar a voz?
+Procura o Python, instala os módulos que faltarem (uns 
+150 MB) e baixa os modelos que faltarem (
+ MB). Pode levar alguns minutos.
+<yellow>Já tem uma instalação em andamento; espere ela terminar.
+<aqua>[Voz]</aqua> <gray>
+<gray>Voltar
+<green>Ligado</green> <gray>(clique para desligar)
+<red>Desligado</red> <gray>(clique para ligar)
+<dark_purple>Sinos do Mundo
+<gray>Criar, editar, testar e apagar
+<gray>as conquistas do servidor.
+<yellow>Clique para abrir
+<gray>Aparência, batidas, ritmo, sons
+<gray>e o texto acima do sino.
+<aqua>Voz e narrador
+<gray>Narrador ativo, frase padrão,
+<gray>frases finais e geração dos áudios.
+<light_purple>Música
+<gray>Música de vitória, volume e
+<gray>música própria.
+<gray>Quem entra na lista de cada
+<gray>conquista.
+<blue>Pacote de recursos
+<gray>Porta, endereço e envio do
+<gray>pacote.
+<green>Ferramentas
+<gray>Testar anúncio, marcar mob, reenviar
+<gray>o pacote, recarregar e limpar áudios.
+<red>Fechar
+<gray>Conquistas: <white>
+ concluídas)
+<gray>Voz: 
+<red>desligada
+<green>funcionando
+<gold>sem voz (falta Python ou arquivos, veja Voz e narrador)
+ <red>(arquivos de voz não encontrados)
+<gray>Áudios gerados: <white>
+<gray>Pacote: 
+<red>ainda não montado
+<gray>Jogadores com o pacote: <white>
+ jogador(es) com o pacote antigo
+<gray>(Ferramentas > Reenviar pacote)
+<yellow>Situação
+<yellow>Esquerdo +
+, direito -
+, Shift ×10
+(vazio)
+<gray>Salvando e gerando os áudios necessários...
+<green>Pronto.</green> <gray>Quem está online ouve as mudanças depois que o 
+pacote for reenviado (Ferramentas > Reenviar pacote).
+<light_purple>Música própria
+<yellow>Como colocar uma música
+<gray>1. Coloque o arquivo em:
+<white>plugins/SinosDoMundo/musicas/
+<gray>2. Formatos: .ogg, .mp3, .wav, .flac
+<gray>3. Clique em Atualizar lista
+<gray>4. Clique na música para usar
+<yellow>Clique para ver no chat
+<yellow>Música padrão do plugin
+<green>Em uso
+<gray>Clique para voltar a ela
+<gray>Use o botão <white>Usar a música padrão</white> na tela Música.
+<gray>Nenhuma música na pasta
+<gray>Coloque arquivos em plugins/SinosDoMundo/musicas
+<gray>e clique em Atualizar lista.
+<gray>Tamanho: <white>
+<gray>OGG: será ajustada para mono
+: será convertida para OGG
+<gold>Arquivo grande: o pacote fica mais pesado
+<yellow>Clique: <gray>usar esta música
+<yellow>Shift + clique: <gray>ouvir só para você
+<green>Atualizar lista
+<gray>Lê a pasta de novo.
+<gold>[Sinos] Como usar uma música própria
+<gray>1. Coloque o arquivo de música nesta pasta do servidor:
+<dark_gray>(clique no caminho para copiar)
+<gray>2. Formatos aceitos: <white>.ogg, .mp3, .wav e .flac</white>.
+<gray>3. Abra <white>/sinos > Música > Colocar música própria</white> e clique em 
+<white>Atualizar lista</white>.
+<gray>4. Shift + clique para ouvir; clique para usar. O plugin converte, ajusta as 
+batidas do sino ao ritmo e pode estender a música para cobrir a fala.
+<gray>Prefira músicas de até uns 30 s e use só músicas que você tem direito de usar.
+<gray>Preparando a prévia de <white>
+</white>... (o seu jogo carrega um pacote pequeno)
+<red>Não foi possível preparar a prévia: 
+<gold>Aviso: arquivo grande. Todo jogador baixa a música junto com o pacote.
+<gray>Analisando e convertendo <white>
+<red>Não foi possível usar a música: 
+<green>Música convertida (
+<gray>Não encontrei ataques fortes nesta música; o ritmo do sino não mudou.
+Ajustar as batidas a esta música?
+Encontrei 
+ batidas fortes (ticks 
+). A fala começaria 
+ s depois da última.
+<green>Batidas ajustadas ao ritmo da música.
+Estender a música?
+A música tem 
+ s e o anúncio com a fala dura uns 15 s. Posso continuar a música com um fundo baixo feito do 
+próprio som dela até 
+<gray>Estendendo a música...
+<red>Não foi possível estender: 
+<green>Música estendida para 
+Reenviar o pacote agora?
+Quem está online só ouve a música nova depois de receber o pacote de novo (o jogo deles recarrega 
+os recursos por alguns segundos).
+<green>Pacote reenviado.
+<gray>Em uso: <white>
+música padrão do plugin
+<gray>Duração: <white>
+<gray>Começa no tick <white>
+<gray> depois que o sino aparece.
+<light_purple>Música da conquista
+<yellow>Música ligada
+<gray>Só quem tem o pacote ouve.
+<gray>Volume da música (a voz não muda).
+<yellow>Início
+<gray>Tick em que a música começa, contado
+<gray>desde que o sino aparece.
+<green>Ouvir agora
+<gray>Toca a música em uso só para você.
+<yellow>Usar a música padrão
+<gray>Volta para a música que vem com o plugin.
+<green>Já está em uso.
+<green>Colocar música própria
+<gray>Mostra como colocar o arquivo na pasta
+<gray>e lista as músicas para escolher.
+<yellow>Ajustar batidas à música em uso
+<gray>Mede os ataques da música e coloca as
+<gray>batidas do sino neles.
+<yellow>Atualizando o seu pacote. Tente de novo em alguns segundos.
+<red>Não foi possível apagar 
+Restaurar o ritmo padrão?
+As batidas do sino e o atraso da fala voltam a acompanhar a música padrão.
+<green>Ritmo da música padrão restaurado.
+<gray>Medindo os ataques da música...
+<red>Não foi possível analisar: 
+<gray>Hospedagem: <white>externa
+<gray>Servidor do pacote: 
+<green>rodando
+<red>parado
+<gray>Áudios de voz: <white>
+<gray>Com versão antiga: <white>
+<yellow>Clique para ver o endereço no chat
+<blue>Pacote
+<gray>Endereço do pacote: <white>
+<dark_gray>(clique para copiar; abra no navegador de outro PC para testar)
+<yellow>Hospedagem: <white>
+pelo plugin
+<gray>Você hospeda o pacote.zip em outro lugar.
+<gray>O plugin serve o pacote na porta abaixo.
+<gray>Use externa quando a hospedagem só
+<gray>libera a porta do jogo.
+<yellow>Endereço do pacote hospedado
+Link direto do pacote.zip hospedado (ex.: https://meusite.com/pacote.zip):
+<gray>Envie para lá o arquivo
+<white>plugins/SinosDoMundo/pacote.zip
+<gray>sempre que o console avisar que mudou.
+<yellow>Servir o pacote
+<gray>Desligado, ninguém recebe o sino 3D,
+<gray>a voz nem a música.
+<yellow>Porta: <white>
+<gray>Porta HTTP de onde os jogadores baixam
+<gray>o pacote. Precisa estar liberada.
+<yellow>Clique para mudar
+Nova porta do pacote (ex.: 8164):
+<red>Porta inválida.
+<yellow>Endereço público
+Endereço que os jogadores usam (ex.: http://SEU-IP:8164). Digite <white>-</white> para automático:
+<gray>Vazio = automático (IP do servidor).
+<gray>Em hospedagem, use o IP ou domínio público.
+<yellow>Pacote obrigatório
+<gray>Ligado, quem recusar o pacote é
+<gray>desconectado.
+<yellow>Mensagem ao jogador
+Mensagem mostrada quando o jogo pergunta se aceita o pacote:
+<gray>Aceita cores MiniMessage.
+<yellow>Reenviar pacote
+<gray>Jogadores com versão antiga: <white>
+<red>O jogo deles recarrega os recursos.
+Reenviar o pacote?
+Todos os jogadores online recebem o pacote de novo.
+<green>Modo externo.</green> <gray>Envie o plugins/SinosDoMundo/pacote.zip para o endereço configurado.
+<green>Servidor do pacote reiniciado.</green>
+<yellow>Servidor do pacote parado.
+<gold>Ritmo das batidas
+<gold>Ritmo
+<gray>Cada relógio é uma batida do sino.
+<gray>Ticks contados desde que o sino aparece
+<gray>(20 ticks = 1 segundo).
+<yellow>Vazio: usa Batidas e Intervalo
+<yellow>Batida 
+: <white>tick 
+ s depois que o sino aparece
+<yellow>Esquerdo +1, direito -1, Shift ×10
+<yellow>Q (soltar item): <gray>remover
+<green>Adicionar batida
+<gray>8 ticks depois da última.
+<red>Limpar ritmo
+<gray>Volta a usar Batidas e Intervalo.
+<yellow>Ritmo da música padrão
+<gray>Restaura as 7 batidas e o atraso da fala
+<gray>que acompanham a música do plugin.
+<yellow>Esquerdo: <gray>editar
+<yellow>Shift + direito: <gray>remover
+<yellow>Linha 
+Nova versão do texto:
+<green>Adicionar
+Novo texto:
+<green>Testar anúncio
+<gray>Escolha uma conquista e ouça o anúncio
+<gray>só para você, com o seu nome.
+Testar qual conquista?
+<green>Testar com vários nomes
+<gray>Como o anterior, mas com você e os
+<gray>outros jogadores online como contribuidores.
+<green>Marcar mob que estou olhando
+<gray>Olhe para o mob (até 20 blocos), clique
+<gray>e escolha a conquista.
+Marcar com qual conquista?
+<green>Mob marcado com 
+<yellow>Desmarcar mob que estou olhando
+<green>Marca removida.
+<gray>Esse mob não tem marca.
+<yellow>Recarregar config
+<gray>Lê de novo o config.yml (se você editou
+<gray>o arquivo à mão).
+sinos reload
+<gray>Manda o pacote atual para todos online.
+Todos os jogadores online recebem o pacote de novo. A tela deles mostra o carregamento por alguns segundos.
+<yellow>Limpar áudios antigos
+<gray>Apaga áudios de narradores que não
+<gray>existem mais e arquivos sem uso.
+<gray>Limpando...
+ arquivo(s) apagado(s).
+<yellow>Idioma: <white>
+<gray>Idioma dos menus, mensagens e console.
+<gray>Os textos dos anúncios ficam no config.yml.
+<yellow>Clique para trocar (pt-BR / en)
+<gray>Narrador ativo: <white>
+<gray>Python: 
+<gold>A voz não funciona agora. Falta:
+<gray>O sino, a música e o texto continuam.
+<aqua>Voz
+<yellow>Voz dos anúncios
+<gray>Desligada, o sino só toca e mostra o texto.
+<yellow>Narradores (linha de baixo)
+<yellow>Clique: <gray>ativar este narrador
+<yellow>Shift + clique: <gray>ouvir uma amostra só para você
+<gray>Ativar gera as falas dele (o Kokoro leva
+<gray>cerca de 1 minuto) e reenvia o pacote.
+<gray>Tipo: <white>
+<gray>Motor: <white>
+<red>Arquivos de voz não encontrados
+<green>Narrador ativo
+<yellow>Clique para ativar
+<yellow>Shift + clique para ouvir
+<yellow>Frase padrão
+Frase padrão dos anúncios:
+<yellow>Frases finais <gray>(
+<gray>Sorteadas depois dos nomes.
+<yellow>Clique para ver e editar
+<aqua>Frases finais
+Uma nova lenda acaba de nascer.
+<yellow>Atraso da fala: <white>
+<gray>Tempo entre a última batida e a fala
+<yellow>Esquerdo +1, direito -1, Shift ±10
+<green>Gerar áudios que faltam
+<gray>Gera as falas que ainda não existem
+<gray>(frases, conquistas, jogadores online).
+<gray>Gerando os áudios que faltam...
+<green>Pronto.</green> <gray>Áudios no banco: 
+<gray>Python: <white>
+<gray>Modelo do narrador ativo:
+<green>Arquivos encontrados
+<red>Arquivos não encontrados
+<yellow>Clique para trocar o comando do Python
+<yellow>Avançado
+Comando ou caminho do Python com piper-tts, soundfile e kokoro-onnx:
+<green>Instalação guiada
+<gray>Python, módulos, modelos de voz e
+<gray>teste, passo a passo.
+<yellow>A amostra deste narrador ainda está sendo gerada, ou o seu pacote está desatualizado 
+(Ferramentas > Reenviar pacote).
+<red>Você precisa aceitar o pacote do servidor para ouvir as amostras.
+<gray>Gerando as falas de <white>
+<green>Narrador trocado para 
+.</green> <gray>Pacote reenviado.
+SinosDoMundo-previa
+Não foi possível extrair musica.py: 
+LEIA-ME.txt
+Coloque aqui as músicas que quer usar nos anúncios do SinosDoMundo.
+Formatos aceitos: .ogg, .mp3, .wav e .flac.
+Depois, no jogo: /sinos > Música > Colocar música própria > Atualizar lista.
+O plugin converte a música para OGG mono (o formato do Minecraft), mede os ataques
+para ajustar as batidas do sino e pode estender a música para cobrir a fala.
+Dicas: prefira músicas curtas (até uns 30 segundos); cada jogador baixa a música no
+Não foi possível criar o LEIA-ME das músicas: 
+"stream":true}]}}
+<red>Não foi possível montar a prévia: 
+converter músicas precisa do Python com soundfile e numpy (
+). Sem isso, use a música padrão.
+o processamento da música passou de 
+erro no Python
+não foi possível rodar o Python (
+<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios.
+SinosDoMundo
+Modelo do sino inválido: 
+Modelo do sino: eixo na altura %.1f, badalo %s (batida a %.1f graus)
+Pacote em modo externo, mas pacote.url-externa está vazio: ninguém recebe o pacote.
+Pacote em modo externo: 
+ (envie o pacote.zip da pasta do plugin para lá)
+Content-Type
+SinosDoMundo-pacote
+Pacote servido na porta 
+Não foi possível abrir a porta 
+ do pacote: 
+O pacote.zip mudou. No modo externo, envie o novo arquivo para 
+ (até lá, novidades como nomes de jogadores novos não tocam).
+Falha ao montar o resource pack
+a prévia precisa do servidor do pacote (pacote.modo: proprio)
+SinosDoMundo: 
+SinosDoMundo: sino 3D e voz
+Arquivo do pacote ausente no plugin: 
+SHA-1
+SinosDoMundo-trabalho
+Python não encontrado. Instale o Python 3.10 ou mais novo (python.org, ou python3 no 
+Linux) e rode de novo. Em hospedagens sem Python, a voz não funciona; o resto do plugin sim.
+Python encontrado: 
+Gerando as falas (o Kokoro leva cerca de 1 minuto)...
+Pronto! A voz está funcionando com o narrador 
+. Reenvie o pacote para quem está online ouvir.
+A instalação terminou, mas ainda falta: 
+A instalação parou: 
+Modelos de voz já instalados.
+Voz pronta: 
+, narrador 
+A voz dos anúncios está desligada porque falta: 
+um narrador em voz.narradores
+. O sino, a música e o texto continuam funcionando. Para instalar a voz: /sinos > Voz e narrador >
+ Instalação guiada, ou /sinos instalar-voz no console.
+config-pt-BR.yml
+Não foi possível criar o config em português: 
+Olá! Eu sou 
+, e vou narrar as conquistas deste servidor.
+ainda verificando
+o Python não respondeu em 20 s
+Python 
+comando "
+" não encontrado
+resposta inesperada do Python
+Python: 
+módulo 
+ (pip install 
+arquivos de voz: 
+Não foi possível extrair gerar_voz.py
+Índice da voz ilegível; os áudios serão gerados de novo
+Não foi possível salvar o índice da voz: 
+Arquivos de voz do narrador 
+ não encontrados: 
+Geração da voz passou de 
+ s e foi cancelada
+Geração da voz falhou (código 
+Piper: 
+Voz (
+ áudio(s) gerado(s)
+Não foi possível rodar o Python da voz (
+Resposta inválida do gerador de voz
+SinosDoMundo-instalador
+Scripts/python.exe
+Criando o ambiente Python do plugin em 
+Não foi possível criar o ambiente Python. Em Debian/Ubuntu instale o pacote python3-venv.
+Atualizando o pip...
+Falha ao atualizar o pip.
+Instalando 
+ (pode levar alguns minutos)...
+Collecting 
+ pacotes baixados...
+Successfully installed
+Módulos instalados (
+ pacotes).
+Falha ao instalar os módulos. Veja o console do servidor.
+ já está baixado.
+Baixando 
+User-Agent
+o download de 
+o arquivo 
+ baixado está corrompido (SHA-256 não confere)
+instalação interrompida
+ (passou de 
+ min)
+ Última saída: 
+SHA-256
+" não existe em voz.narradores; usando 
+Alerta, alerta! {conquista}. Seus contribuidores foram {jogadores}. {final}
+e outros jogadores

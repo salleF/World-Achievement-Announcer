@@ -1,0 +1,44 @@
+SinosDoMundo - third-party software and content
+================================================
+
+Nothing listed below is bundled inside the plugin jar unless stated. The optional voice
+feature installs or downloads these on the server machine only when the admin confirms it
+(/sinos instalar-voz confirmar, or the "Guided installation" button in /sinos).
+
+Downloaded by the guided voice installer
+----------------------------------------
+Kokoro-82M voice model and voices (kokoro-v1.0.int8.onnx, voices-v1.0.bin)
+  Author: hexgrad - https://huggingface.co/hexgrad/Kokoro-82M
+  License: Apache License 2.0
+  Downloaded from: https://github.com/thewh1teagle/kokoro-onnx/releases (model-files-v1.0),
+  checked with SHA-256 before use.
+
+Installed with pip into plugins/SinosDoMundo/python-env
+-------------------------------------------------------
+kokoro-onnx       - https://github.com/thewh1teagle/kokoro-onnx         - MIT License
+  (pulls in onnxruntime - MIT, espeakng-loader / espeak-ng - GPL-3.0,
+   phonemizer-fork - GPL-3.0, and their own dependencies)
+soundfile         - https://github.com/bastibe/python-soundfile         - BSD 3-Clause
+  (bundles libsndfile - LGPL-2.1)
+numpy             - https://numpy.org                                    - BSD 3-Clause
+
+These Python packages run as a separate process started by the plugin; they are not linked
+into or shipped with the plugin.
+
+Optional, only if the admin configures it
+-----------------------------------------
+Piper TTS (engine "piper") - https://github.com/OHF-Voice/piper1-gpl - GPL-3.0
+  Piper voice models have their own licenses; several are trained on research-only
+  datasets. Check the license of any Piper voice before using it on a commercial server.
+
+Bundled in the plugin
+---------------------
+3D bell model and its textures - made by the plugin author.
+Achievement music - made by the plugin author.
+Speech audio is generated on the server at runtime from the texts in config.yml.
+
+Runtime platform (not bundled)
+------------------------------
+Paper API - https://papermc.io - GPL-3.0 / MIT (compile-time only)
+Minecraft sounds referenced by name (minecraft:block.bell.use etc.) come from the game
+client; no Minecraft assets are included.
