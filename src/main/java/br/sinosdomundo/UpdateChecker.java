@@ -19,7 +19,8 @@ import org.bukkit.plugin.Plugin;
 public final class UpdateChecker {
 
     /** Arquivo com a versão mais nova. Vazio = não confere. -Dsinos.versionUrl=... troca o endereço (testes). */
-    static final String VERSION_URL = System.getProperty("sinos.versionUrl", "");
+    static final String VERSION_URL = System.getProperty("sinos.versionUrl",
+            "https://raw.githubusercontent.com/salleF/World-Achievement-Announcer/main/version.txt");
 
     private final Plugin plugin;
     private volatile String latest;
@@ -37,7 +38,7 @@ public final class UpdateChecker {
         HttpClient client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(10))
                 .followRedirects(HttpClient.Redirect.NORMAL).build();
         HttpRequest request = HttpRequest.newBuilder(URI.create(VERSION_URL)).timeout(Duration.ofSeconds(10))
-                .header("User-Agent", "SinosDoMundo/" + current()).GET().build();
+                .header("User-Agent", "WorldAchievementAnnouncer/" + current()).GET().build();
         CompletableFuture<HttpResponse<String>> response = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
         response.thenAccept(r -> {
             if (r.statusCode() != 200) {

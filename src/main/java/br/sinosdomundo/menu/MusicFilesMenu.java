@@ -38,7 +38,7 @@ public final class MusicFilesMenu extends Menu {
     @Override
     protected void render() {
         button(4, Items.item(Material.KNOWLEDGE_BOOK, "<yellow>Como colocar uma música",
-                "<gray>1. Coloque o arquivo em:", "<white>plugins/SinosDoMundo/musicas/",
+                "<gray>1. Coloque o arquivo em:", "<white>plugins/WorldAchievementAnnouncer/musicas/",
                 "<gray>2. Formatos: .ogg, .mp3, .wav, .flac", "<gray>3. Clique em Atualizar lista",
                 "<gray>4. Clique na música para usar", "", "<yellow>Clique para ver no chat"), click -> tutorial());
 
@@ -54,7 +54,7 @@ public final class MusicFilesMenu extends Menu {
         List<File> files = plugin.music().files();
         if (files.isEmpty()) {
             icon(22, Items.item(Material.PAPER, "<gray>Nenhuma música na pasta",
-                    "<gray>Coloque arquivos em plugins/SinosDoMundo/musicas", "<gray>e clique em Atualizar lista."));
+                    "<gray>Coloque arquivos em plugins/WorldAchievementAnnouncer/musicas", "<gray>e clique em Atualizar lista."));
         }
         for (int i = 0; i < files.size() && i < MAX_FILES; i++) {
             File file = files.get(i);

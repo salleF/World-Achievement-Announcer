@@ -56,7 +56,7 @@ public final class PackMenu extends Menu {
         if (external) {
             text(20, Material.FILLED_MAP, "<yellow>Endereço do pacote hospedado", "pacote.url-externa", "",
                     "Link direto do pacote.zip hospedado (ex.: https://meusite.com/pacote.zip):", false,
-                    "<gray>Envie para lá o arquivo", "<white>plugins/SinosDoMundo/pacote.zip",
+                    "<gray>Envie para lá o arquivo", "<white>plugins/WorldAchievementAnnouncer/pacote.zip",
                     "<gray>sempre que o console avisar que mudou.");
         }
         button(10, Items.toggle(plugin.getConfig().getBoolean("pacote.ativado", true), "<yellow>Servir o pacote",
@@ -114,7 +114,7 @@ public final class PackMenu extends Menu {
         plugin.saveAndApply(false);
         plugin.restartPackServer();
         viewer.sendMessage(Items.text(plugin.pack().external()
-                ? "<green>Modo externo.</green> <gray>Envie o plugins/SinosDoMundo/pacote.zip para o endereço configurado."
+                ? "<green>Modo externo.</green> <gray>Envie o plugins/WorldAchievementAnnouncer/pacote.zip para o endereço configurado."
                 : plugin.pack().running() ? "<green>Servidor do pacote reiniciado.</green>" : "<yellow>Servidor do pacote parado."));
         if (viewer.getOpenInventory().getTopInventory().getHolder(false) == this) {
             refresh();

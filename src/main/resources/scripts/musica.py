@@ -1,4 +1,4 @@
-"""Prepara músicas próprias para o SinosDoMundo.
+"""Prepara músicas próprias para o World Achievement Announcer.
 
 O plugin chama este script como um programa separado:
   python musica.py analisar <arquivo>

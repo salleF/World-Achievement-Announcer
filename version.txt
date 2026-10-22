@@ -1,0 +1,2 @@
+1.0.0
+https://github.com/salleF/World-Achievement-Announcer/releases

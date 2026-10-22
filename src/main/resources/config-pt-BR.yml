@@ -1,4 +1,4 @@
-# SinosDoMundo - configuração
+# World Achievement Announcer - configuração
 
 # Idioma dos menus, mensagens e console: pt-BR ou en (ou um arquivo seu em lang/). No jogo: /sinos idioma.
 idioma: pt-BR
@@ -61,7 +61,7 @@ texto:
 voz:
   # A voz é gerada localmente (texto-para-fala). Requisitos na máquina do servidor:
   #   Python 3 com: pip install kokoro-onnx soundfile numpy  (e piper-tts, se usar vozes Piper)
-  #   os arquivos de voz em plugins/SinosDoMundo/vozes (veja voz.narradores)
+  #   os arquivos de voz em plugins/WorldAchievementAnnouncer/vozes (veja voz.narradores)
   # Sem Python, o plugin funciona normalmente sem a voz (sino, música e texto).
   ativada: true
   # Comando do Python que tem os pacotes instalados.
@@ -156,11 +156,11 @@ musica:
   inicio-ticks: 1
   # Música própria em uso (escolhida em /sinos > Música). Vazio = música padrão do plugin.
   arquivo: ""
-  # Para usar outra música, coloque um .ogg mono em plugins/SinosDoMundo/musica/conquista.ogg.
+  # Para usar outra música, coloque um .ogg mono em plugins/WorldAchievementAnnouncer/musica/conquista.ogg.
   volume: 0.45
 
 pacote:
-  # O plugin monta um resource pack (sino 3D, voz e música) em plugins/SinosDoMundo/pacote.zip.
+  # O plugin monta um resource pack (sino 3D, voz e música) em plugins/WorldAchievementAnnouncer/pacote.zip.
   ativado: true
   # proprio: o plugin serve o pacote por HTTP na porta abaixo (precisa estar liberada na hospedagem).
   # externo: você hospeda o pacote.zip em outro lugar (site, GitHub, Dropbox com link direto) e informa
@@ -173,7 +173,7 @@ pacote:
   # Em rede local, informe o IP da máquina (ex.: "http://192.168.0.16:8164").
   url-publica: ""
   obrigatorio: false
-  mensagem: "<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios."
+  mensagem: "<gold>Pacote do World Achievement Announcer</gold>: sino 3D e voz dos anúncios."
 
 contribuidores:
   # dano: quem causou dano no mob; presenca: quem estava perto quando ele morreu; ambos: os dois.

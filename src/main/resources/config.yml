@@ -1,4 +1,4 @@
-# SinosDoMundo (World Bells) - configuration
+# World Achievement Announcer - configuration
 # Config keys are in Portuguese; the comments explain each one. Most of this can be edited in game with /sinos.
 
 # Language of menus, messages and console: en or pt-BR (or your own file in lang/). In game: /sinos idioma.
@@ -62,7 +62,7 @@ texto:
 voz:
   # The voice is generated locally (text-to-speech). Requirements on the server machine:
   #   Python 3 with: pip install kokoro-onnx soundfile numpy  (and piper-tts, if you use Piper voices)
-  #   the voice files in plugins/SinosDoMundo/vozes (see voz.narradores)
+  #   the voice files in plugins/WorldAchievementAnnouncer/vozes (see voz.narradores)
   # /sinos > Voice and narrator > Guided installation (or /sinos instalar-voz) does all of this for you.
   # Without Python, the plugin works normally without voice (bell, music and text).
   ativada: true
@@ -162,7 +162,7 @@ musica:
   volume: 0.45
 
 pacote:
-  # The plugin builds a resource pack (3D bell, voice and music) in plugins/SinosDoMundo/pacote.zip.
+  # The plugin builds a resource pack (3D bell, voice and music) in plugins/WorldAchievementAnnouncer/pacote.zip.
   ativado: true
   # proprio: the plugin serves the pack over HTTP on the port below (it must be open on your host).
   # externo: you host pacote.zip somewhere else (website, GitHub, Dropbox direct link) and give the
@@ -175,7 +175,7 @@ pacote:
   # On a local network, give the machine's IP (e.g. "http://192.168.0.16:8164").
   url-publica: ""
   obrigatorio: false
-  mensagem: "<gold>SinosDoMundo pack</gold>: 3D bell and announcement voice."
+  mensagem: "<gold>World Achievement Announcer pack</gold>: 3D bell and announcement voice."
 
 contribuidores:
   # dano: who damaged the mob; presenca: who was near when it died; ambos: both.

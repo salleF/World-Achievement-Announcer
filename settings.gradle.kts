@@ -1,1 +1,1 @@
-rootProject.name = "sinos-do-mundo"
+rootProject.name = "world-achievement-announcer"

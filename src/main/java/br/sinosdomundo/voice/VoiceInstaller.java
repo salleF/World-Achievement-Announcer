@@ -156,7 +156,7 @@ public final class VoiceInstaller {
                 File partial = new File(voicesFolder(), model.name() + ".parcial");
                 progress.accept("Baixando " + model.name() + " (" + model.size() / 1_000_000 + " MB)...");
                 HttpResponse<InputStream> response = client.send(HttpRequest.newBuilder(URI.create(model.url()))
-                        .header("User-Agent", "SinosDoMundo").GET().build(), HttpResponse.BodyHandlers.ofInputStream());
+                        .header("User-Agent", "WorldAchievementAnnouncer").GET().build(), HttpResponse.BodyHandlers.ofInputStream());
                 if (response.statusCode() != 200) {
                     throw new IOException("o download de " + model.name() + " respondeu " + response.statusCode());
                 }

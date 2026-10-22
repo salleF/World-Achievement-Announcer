@@ -10,13 +10,13 @@ from pathlib import Path
 SAIDA = Path(__file__).resolve().parents[2] / "src" / "main" / "resources" / "lang" / "en.yml"
 
 # Trechos técnicos (arquivos, ids, saída do pip que o plugin lê) que não devem ser traduzidos
-TECNICOS = ['por=', 'pt-BR', '<white>plugins/SinosDoMundo/python-env', '<white>plugins/SinosDoMundo/vozes', '<white>plugins/SinosDoMundo/musicas/', '<white>plugins/SinosDoMundo/pacote.zip', 'sinos reload', 'SinosDoMundo-previa', 'LEIA-ME.txt', '"stream":true}]}}', 'SinosDoMundo', 'Content-Type', 'SinosDoMundo-pacote', 'SinosDoMundo: ', 'SinosDoMundo: sino 3D e voz', 'SHA-1', 'SinosDoMundo-trabalho', 'config-pt-BR.yml', 'Olá! Eu sou ', ', e vou narrar as conquistas deste servidor.', 'Python ', 'Python: ', ' (pip install ', 'Piper: ', 'SinosDoMundo-instalador', 'Scripts/python.exe', 'Collecting ', 'Successfully installed', 'User-Agent', 'SHA-256', 'Alerta, alerta! {conquista}. Seus contribuidores foram {jogadores}. {final}', 'e outros jogadores', 'Hello! I am ', ", and I will narrate this server's achievements."]
+TECNICOS = ['por=', 'pt-BR', '<white>plugins/WorldAchievementAnnouncer/python-env', '<white>plugins/WorldAchievementAnnouncer/vozes', '<white>plugins/WorldAchievementAnnouncer/musicas/', '<white>plugins/WorldAchievementAnnouncer/pacote.zip', 'sinos reload', 'World Achievement Announcer-previa', 'LEIA-ME.txt', '"stream":true}]}}', 'World Achievement Announcer', 'Content-Type', 'World Achievement Announcer-pacote', 'World Achievement Announcer: ', 'World Achievement Announcer: sino 3D e voz', 'SHA-1', 'World Achievement Announcer-trabalho', 'config-pt-BR.yml', 'Olá! Eu sou ', ', e vou narrar as conquistas deste servidor.', 'Python ', 'Python: ', ' (pip install ', 'Piper: ', 'World Achievement Announcer-instalador', 'Scripts/python.exe', 'Collecting ', 'Successfully installed', 'User-Agent', 'SHA-256', 'Alerta, alerta! {conquista}. Seus contribuidores foram {jogadores}. {final}', 'e outros jogadores', 'Hello! I am ', ", and I will narrate this server's achievements."]
 
 PARES = [
     ('Nova versão disponível:', 'New version available:'),
     ('você usa ', 'you are on '),
     ('baixar a versão nova', 'download the new version'),
-    ('SinosDoMundo não está ativo', 'SinosDoMundo is not enabled'),
+    ('World Achievement Announcer não está ativo', 'World Achievement Announcer is not enabled'),
     ('Conquista de teste', 'Test achievement'),
     ('Anúncio de teste disparado.', 'Test announcement sent.'),
     ('Essa conquista já foi concluída. Use /sinos resetar ', 'That achievement was already completed. Use /sinos resetar'),
@@ -52,7 +52,7 @@ PARES = [
     ('(ou o nome de um arquivo da pasta lang).', '(or the name of a file in the lang folder).'),
     ('Idioma dos menus e mensagens: ', 'Menu and message language:'),
     ('. Os textos dos anúncios ficam no config.yml.', '. Announcement texts live in config.yml.'),
-    ('Config do SinosDoMundo recarregado.', 'SinosDoMundo config reloaded.'),
+    ('Config do World Achievement Announcer recarregado.', 'World Achievement Announcer config reloaded.'),
     ('Informe o id da conquista. Veja com /sinos lista.', 'Give the achievement id. See /sinos lista.'),
     ('Conquista não encontrada: ', 'Achievement not found:'),
     ('e mais {0}', 'and {0} more'),
@@ -301,7 +301,7 @@ PARES = [
     ('Baixar os modelos?', 'Download the models?'),
     ('Baixa ', 'Downloads'),
     (' MB do GitHub ', 'MB from GitHub'),
-    ('(thewh1teagle/kokoro-onnx) para plugins/SinosDoMundo/vozes.', '(thewh1teagle/kokoro-onnx) to plugins/SinosDoMundo/vozes.'),
+    ('(thewh1teagle/kokoro-onnx) para plugins/WorldAchievementAnnouncer/vozes.', '(thewh1teagle/kokoro-onnx) to plugins/WorldAchievementAnnouncer/vozes.'),
     ('<green>Modelos prontos.</green> Agora o passo 4.', '<green>Models ready.</green> Now step 4.'),
     ('<yellow>4. Gerar falas e testar', '<yellow>4. Generate lines and test'),
     ('<gray>Gera as falas do narrador ativo e toca', "<gray>Generates the active narrator's lines and plays"),
@@ -378,7 +378,7 @@ PARES = [
     ('<gray>Clique para voltar a ela', '<gray>Click to go back to it'),
     ('<gray>Use o botão <white>Usar a música padrão</white> na tela Música.', '<gray>Use the <white>Use the default music</white> button on the Music screen.'),
     ('<gray>Nenhuma música na pasta', '<gray>No songs in the folder'),
-    ('<gray>Coloque arquivos em plugins/SinosDoMundo/musicas', '<gray>Put files in plugins/SinosDoMundo/musicas'),
+    ('<gray>Coloque arquivos em plugins/WorldAchievementAnnouncer/musicas', '<gray>Put files in plugins/WorldAchievementAnnouncer/musicas'),
     ('<gray>e clique em Atualizar lista.', '<gray>and click Refresh list.'),
     ('<gray>Tamanho: <white>', '<gray>Size: <white>'),
     ('<gray>OGG: será ajustada para mono', '<gray>OGG: will be converted to mono'),
@@ -496,7 +496,7 @@ PARES = [
     ('<red>O jogo deles recarrega os recursos.', '<red>Their game reloads resources.'),
     ('Reenviar o pacote?', 'Resend the pack?'),
     ('Todos os jogadores online recebem o pacote de novo.', 'All online players receive the pack again.'),
-    ('<green>Modo externo.</green> <gray>Envie o plugins/SinosDoMundo/pacote.zip para o endereço configurado.', '<green>External mode.</green> <gray>Upload plugins/SinosDoMundo/pacote.zip to the configured address.'),
+    ('<green>Modo externo.</green> <gray>Envie o plugins/WorldAchievementAnnouncer/pacote.zip para o endereço configurado.', '<green>External mode.</green> <gray>Upload plugins/WorldAchievementAnnouncer/pacote.zip to the configured address.'),
     ('<green>Servidor do pacote reiniciado.</green>', '<green>Pack server restarted.</green>'),
     ('<yellow>Servidor do pacote parado.', '<yellow>Pack server stopped.'),
     ('<gold>Ritmo das batidas', '<gold>Strike rhythm'),
@@ -602,7 +602,7 @@ PARES = [
     ('<green>Narrador trocado para ', '<green>Narrator changed to'),
     ('.</green> <gray>Pacote reenviado.', '.</green> <gray>Pack resent.'),
     ('Não foi possível extrair musica.py: ', 'Could not extract musica.py:'),
-    ('Coloque aqui as músicas que quer usar nos anúncios do SinosDoMundo.', 'Put here the songs you want to use in SinosDoMundo announcements.'),
+    ('Coloque aqui as músicas que quer usar nos anúncios do World Achievement Announcer.', 'Put here the songs you want to use in World Achievement Announcer announcements.'),
     ('Formatos aceitos: .ogg, .mp3, .wav e .flac.', 'Accepted formats: .ogg, .mp3, .wav and .flac.'),
     ('Depois, no jogo: /sinos > Música > Colocar música própria > Atualizar lista.', 'Then, in game: /sinos > Music > Add your own music > Refresh list.'),
     ('O plugin converte a música para OGG mono (o formato do Minecraft), mede os ataques', "The plugin converts the song to mono OGG (Minecraft's format), measures the beats"),
@@ -615,7 +615,7 @@ PARES = [
     ('o processamento da música passou de ', 'music processing took longer than'),
     ('erro no Python', 'Python error'),
     ('não foi possível rodar o Python (', 'could not run Python ('),
-    ('<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios.', '<gold>SinosDoMundo pack</gold>: 3D bell and announcement voice.'),
+    ('<gold>Pacote do World Achievement Announcer</gold>: sino 3D e voz dos anúncios.', '<gold>World Achievement Announcer pack</gold>: 3D bell and announcement voice.'),
     ('Modelo do sino inválido: ', 'Invalid bell model:'),
     ('Modelo do sino: eixo na altura %.1f, badalo %s (batida a %.1f graus)', 'Bell model: pivot at height %.1f, clapper %s (strike at %.1f degrees)'),
     ('Pacote em modo externo, mas pacote.url-externa está vazio: ninguém recebe o pacote.', 'Pack in external mode, but pacote.url-externa is empty: nobody gets the pack.'),
@@ -694,7 +694,7 @@ def yaml_quote(texto):
 
 
 def main():
-    saida = ["# SinosDoMundo - English", "#", "# Each pair is a Portuguese fragment from the plugin (pt) and its translation (tr).",
+    saida = ["# World Achievement Announcer - English", "#", "# Each pair is a Portuguese fragment from the plugin (pt) and its translation (tr).",
              "# Edit the tr values to change the wording. To make another language, copy this file",
              "# (e.g. es.yml), translate the tr values and set idioma: es in config.yml.", "traducoes:"]
     for pt, ingles in PARES:

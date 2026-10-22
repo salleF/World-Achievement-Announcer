@@ -70,7 +70,7 @@ public final class InstallMenu extends Menu {
         List<String> moduleLore = new ArrayList<>();
         moduleLore.add(modules ? "<green>kokoro-onnx, soundfile e numpy instalados" : "<red>Faltam módulos do Python");
         moduleLore.add("<gray>Instala num ambiente só do plugin:");
-        moduleLore.add("<white>plugins/SinosDoMundo/python-env");
+        moduleLore.add("<white>plugins/WorldAchievementAnnouncer/python-env");
         moduleLore.add("<gray>(baixa uns 150 MB da internet, PyPI)");
         moduleLore.add("");
         moduleLore.add(health.pythonFound() ? "<yellow>Clique para instalar" : "<gray>Faça o passo 1 antes");
@@ -97,14 +97,14 @@ public final class InstallMenu extends Menu {
         long total = VoiceInstaller.KOKORO_FILES.stream().mapToLong(VoiceInstaller.ModelFile::size).sum() / 1_000_000;
         button(14, Items.item(models ? Material.LIME_CONCRETE : Material.ORANGE_CONCRETE, "<yellow>3. Modelos de voz",
                 models ? "<green>Modelos do Kokoro encontrados" : "<red>Modelos do Kokoro não encontrados",
-                "<gray>Baixa " + total + " MB do GitHub para", "<white>plugins/SinosDoMundo/vozes",
+                "<gray>Baixa " + total + " MB do GitHub para", "<white>plugins/WorldAchievementAnnouncer/vozes",
                 "<gray>e confere cada arquivo (SHA-256).", "", models ? "<gray>Nada a fazer" : "<yellow>Clique para baixar"),
                 click -> {
                     if (models) {
                         return;
                     }
                     new ConfirmMenu(plugin, viewer, "Baixar os modelos?", "Baixa " + total + " MB do GitHub "
-                            + "(thewh1teagle/kokoro-onnx) para plugins/SinosDoMundo/vozes.", () -> step(() ->
+                            + "(thewh1teagle/kokoro-onnx) para plugins/WorldAchievementAnnouncer/vozes.", () -> step(() ->
                             plugin.downloadModelsIfNeeded(progress(viewer, plugin)).whenComplete((v, error) -> sync(() -> {
                                 if (error != null) {
                                     say("<red>Falhou:</red> " + Items.message(root(error)));

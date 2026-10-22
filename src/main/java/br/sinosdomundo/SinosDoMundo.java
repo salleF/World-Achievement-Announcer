@@ -18,6 +18,10 @@ import br.sinosdomundo.voice.SpeechPlanner;
 import br.sinosdomundo.voice.VoiceInstaller;
 import br.sinosdomundo.voice.VoiceBank;
 import br.sinosdomundo.voice.VoiceSettings;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -35,6 +39,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.sound.Sound;
+import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -48,6 +54,7 @@ public final class SinosDoMundo extends JavaPlugin implements Listener, SinosApi
 
     private static final long PURGE_PERIOD_TICKS = 20 * 60;
     private static final UUID NIL_UUID = new UUID(0, 0);
+    private static final int BSTATS_ID = 34873;
 
     private BellSettings settings;
     private VoiceSettings voiceSettings;
@@ -65,6 +72,33 @@ public final class SinosDoMundo extends JavaPlugin implements Listener, SinosApi
     private UpdateChecker updates;
     /** Jogadores que carregaram o pacote do plugin (só eles veem o badalo separado). */
     private final Set<UUID> withPack = ConcurrentHashMap.newKeySet();
+
+    /** Nome antigo do plugin: a pasta plugins/SinosDoMundo é levada para a pasta nova na primeira vez. */
+    private static final String OLD_FOLDER = "SinosDoMundo";
+
+    @Override
+    public void onLoad() {
+        File old = new File(getDataFolder().getParentFile(), OLD_FOLDER);
+        if (!old.isDirectory() || getDataFolder().exists()) {
+            return;
+        }
+        if (!old.renameTo(getDataFolder())) {
+            getLogger().warning("Não foi possível mover " + old + " para " + getDataFolder() + "; mova a pasta manualmente.");
+            return;
+        }
+        // Caminhos gravados no config (Python do ambiente, modelos da voz) apontavam para a pasta antiga
+        File config = new File(getDataFolder(), "config.yml");
+        try {
+            String text = Files.readString(config.toPath(), StandardCharsets.UTF_8);
+            String moved = text.replaceAll("(?<=[/\\\\])" + OLD_FOLDER + "(?=[/\\\\])", getDataFolder().getName());
+            if (!moved.equals(text)) {
+                Files.writeString(config.toPath(), moved, StandardCharsets.UTF_8);
+            }
+        } catch (IOException e) {
+            getLogger().warning("Não foi possível atualizar os caminhos do config.yml: " + e.getMessage());
+        }
+        getLogger().info("Pasta antiga " + OLD_FOLDER + " movida para " + getDataFolder().getName() + ".");
+    }
 
     @Override
     public void onEnable() {
@@ -103,6 +137,12 @@ public final class SinosDoMundo extends JavaPlugin implements Listener, SinosApi
 
         SinosApi.Holder.set(this);
         checkHealth().thenCompose(v -> prepareVoiceAndPack(true));
+        // Estatísticas anônimas (bStats); o admin desliga em plugins/bStats/config.yml
+        Metrics metrics = new Metrics(this, BSTATS_ID);
+        metrics.addCustomChart(new SimplePie("language", Lang::code));
+        metrics.addCustomChart(new SimplePie("voice", () -> voiceSettings.enabled() && health.canSpeak(voiceSettings.activeNarrator())
+                ? "enabled" : "disabled"));
+        metrics.addCustomChart(new SimplePie("pack_hosting", () -> getConfig().getString("pacote.modo", "proprio")));
         updates = new UpdateChecker(this);
         if (getConfig().getBoolean("verificar-atualizacoes", true)) {
             updates.check();

@@ -1,4 +1,4 @@
-SinosDoMundo não está ativo
+World Achievement Announcer não está ativo
 por=
 Conquista de teste
 Anúncio de teste disparado.
@@ -35,7 +35,7 @@ Idioma atual:
 (ou o nome de um arquivo da pasta lang).
 Idioma dos menus e mensagens: 
 . Os textos dos anúncios ficam no config.yml.
-Config do SinosDoMundo recarregado.
+Config do World Achievement Announcer recarregado.
 Informe o id da conquista. Veja com /sinos lista.
 Conquista não encontrada: 
 pt-BR
@@ -264,7 +264,7 @@ Procurando o Python...
 <green>kokoro-onnx, soundfile e numpy instalados
 <red>Faltam módulos do Python
 <gray>Instala num ambiente só do plugin:
-<white>plugins/SinosDoMundo/python-env
+<white>plugins/WorldAchievementAnnouncer/python-env
 <gray>(baixa uns 150 MB da internet, PyPI)
 <yellow>Clique para instalar
 <gray>Faça o passo 1 antes
@@ -280,14 +280,14 @@ kokoro-onnx, soundfile e numpy (uns 150 MB). Pode levar alguns minutos.
 <red>Modelos do Kokoro não encontrados
 <gray>Baixa 
  MB do GitHub para
-<white>plugins/SinosDoMundo/vozes
+<white>plugins/WorldAchievementAnnouncer/vozes
 <gray>e confere cada arquivo (SHA-256).
 <gray>Nada a fazer
 <yellow>Clique para baixar
 Baixar os modelos?
 Baixa 
  MB do GitHub 
-(thewh1teagle/kokoro-onnx) para plugins/SinosDoMundo/vozes.
+(thewh1teagle/kokoro-onnx) para plugins/WorldAchievementAnnouncer/vozes.
 <green>Modelos prontos.</green> Agora o passo 4.
 <yellow>4. Gerar falas e testar
 <gray>Gera as falas do narrador ativo e toca
@@ -355,7 +355,7 @@ pacote for reenviado (Ferramentas > Reenviar pacote).
 <light_purple>Música própria
 <yellow>Como colocar uma música
 <gray>1. Coloque o arquivo em:
-<white>plugins/SinosDoMundo/musicas/
+<white>plugins/WorldAchievementAnnouncer/musicas/
 <gray>2. Formatos: .ogg, .mp3, .wav, .flac
 <gray>3. Clique em Atualizar lista
 <gray>4. Clique na música para usar
@@ -365,7 +365,7 @@ pacote for reenviado (Ferramentas > Reenviar pacote).
 <gray>Clique para voltar a ela
 <gray>Use o botão <white>Usar a música padrão</white> na tela Música.
 <gray>Nenhuma música na pasta
-<gray>Coloque arquivos em plugins/SinosDoMundo/musicas
+<gray>Coloque arquivos em plugins/WorldAchievementAnnouncer/musicas
 <gray>e clique em Atualizar lista.
 <gray>Tamanho: <white>
 <gray>OGG: será ajustada para mono
@@ -458,7 +458,7 @@ pelo plugin
 <yellow>Endereço do pacote hospedado
 Link direto do pacote.zip hospedado (ex.: https://meusite.com/pacote.zip):
 <gray>Envie para lá o arquivo
-<white>plugins/SinosDoMundo/pacote.zip
+<white>plugins/WorldAchievementAnnouncer/pacote.zip
 <gray>sempre que o console avisar que mudou.
 <yellow>Servir o pacote
 <gray>Desligado, ninguém recebe o sino 3D,
@@ -484,7 +484,7 @@ Mensagem mostrada quando o jogo pergunta se aceita o pacote:
 <red>O jogo deles recarrega os recursos.
 Reenviar o pacote?
 Todos os jogadores online recebem o pacote de novo.
-<green>Modo externo.</green> <gray>Envie o plugins/SinosDoMundo/pacote.zip para o endereço configurado.
+<green>Modo externo.</green> <gray>Envie o plugins/WorldAchievementAnnouncer/pacote.zip para o endereço configurado.
 <green>Servidor do pacote reiniciado.</green>
 <yellow>Servidor do pacote parado.
 <gold>Ritmo das batidas
@@ -590,10 +590,10 @@ Comando ou caminho do Python com piper-tts, soundfile e kokoro-onnx:
 <gray>Gerando as falas de <white>
 <green>Narrador trocado para 
 .</green> <gray>Pacote reenviado.
-SinosDoMundo-previa
+World Achievement Announcer-previa
 Não foi possível extrair musica.py: 
 LEIA-ME.txt
-Coloque aqui as músicas que quer usar nos anúncios do SinosDoMundo.
+Coloque aqui as músicas que quer usar nos anúncios do World Achievement Announcer.
 Formatos aceitos: .ogg, .mp3, .wav e .flac.
 Depois, no jogo: /sinos > Música > Colocar música própria > Atualizar lista.
 O plugin converte a música para OGG mono (o formato do Minecraft), mede os ataques
@@ -607,15 +607,15 @@ converter músicas precisa do Python com soundfile e numpy (
 o processamento da música passou de 
 erro no Python
 não foi possível rodar o Python (
-<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios.
-SinosDoMundo
+<gold>Pacote do World Achievement Announcer</gold>: sino 3D e voz dos anúncios.
+World Achievement Announcer
 Modelo do sino inválido: 
 Modelo do sino: eixo na altura %.1f, badalo %s (batida a %.1f graus)
 Pacote em modo externo, mas pacote.url-externa está vazio: ninguém recebe o pacote.
 Pacote em modo externo: 
  (envie o pacote.zip da pasta do plugin para lá)
 Content-Type
-SinosDoMundo-pacote
+World Achievement Announcer-pacote
 Pacote servido na porta 
 Não foi possível abrir a porta 
  do pacote: 
@@ -623,11 +623,11 @@ O pacote.zip mudou. No modo externo, envie o novo arquivo para
  (até lá, novidades como nomes de jogadores novos não tocam).
 Falha ao montar o resource pack
 a prévia precisa do servidor do pacote (pacote.modo: proprio)
-SinosDoMundo: 
-SinosDoMundo: sino 3D e voz
+World Achievement Announcer: 
+World Achievement Announcer: sino 3D e voz
 Arquivo do pacote ausente no plugin: 
 SHA-1
-SinosDoMundo-trabalho
+World Achievement Announcer-trabalho
 Python não encontrado. Instale o Python 3.10 ou mais novo (python.org, ou python3 no 
 Linux) e rode de novo. Em hospedagens sem Python, a voz não funciona; o resto do plugin sim.
 Python encontrado: 
@@ -670,7 +670,7 @@ Voz (
  áudio(s) gerado(s)
 Não foi possível rodar o Python da voz (
 Resposta inválida do gerador de voz
-SinosDoMundo-instalador
+World Achievement Announcer-instalador
 Scripts/python.exe
 Criando o ambiente Python do plugin em 
 Não foi possível criar o ambiente Python. Em Debian/Ubuntu instale o pacote python3-venv.

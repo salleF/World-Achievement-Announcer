@@ -18,7 +18,7 @@ public record PackSettings(boolean enabled, int port, String publicUrl, boolean 
                 config.getInt("pacote.porta", 8164),
                 config.getString("pacote.url-publica", "").trim(),
                 config.getBoolean("pacote.obrigatorio", false),
-                config.getString("pacote.mensagem", "<gold>Pacote do SinosDoMundo</gold>: sino 3D e voz dos anúncios."),
+                config.getString("pacote.mensagem", "<gold>Pacote do World Achievement Announcer</gold>: sino 3D e voz dos anúncios."),
                 config.getString("pacote.modo", "proprio").trim().toLowerCase(Locale.ROOT).equals("externo"),
                 config.getString("pacote.url-externa", "").trim());
     }

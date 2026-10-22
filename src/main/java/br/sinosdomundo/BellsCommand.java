@@ -135,7 +135,7 @@ final class BellsCommand implements TabExecutor {
                 // /sinos instalar-voz mostra o que vai ser feito; /sinos instalar-voz confirmar instala
                 if (args.length < 2 || !args[1].equalsIgnoreCase("confirmar")) {
                     say(sender, "Instalação da voz: procura o Python, cria um ambiente Python em "
-                            + "plugins/SinosDoMundo/python-env e instala kokoro-onnx, soundfile e numpy (uns 150 MB, se "
+                            + "plugins/WorldAchievementAnnouncer/python-env e instala kokoro-onnx, soundfile e numpy (uns 150 MB, se "
                             + "faltarem) e baixa os modelos do Kokoro (uns 120 MB, se faltarem).");
                     say(sender, "Para continuar: /sinos instalar-voz confirmar");
                     return true;
@@ -158,7 +158,7 @@ final class BellsCommand implements TabExecutor {
             }
             case "reload" -> {
                 plugin.reloadSettings();
-                say(sender, "Config do SinosDoMundo recarregado.");
+                say(sender, "Config do World Achievement Announcer recarregado.");
             }
             default -> {
                 return false;

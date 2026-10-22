@@ -1,4 +1,4 @@
-SinosDoMundo - third-party software and content
+World Achievement Announcer - third-party software and content
 ================================================
 
 Nothing listed below is bundled inside the plugin jar unless stated. The optional voice
@@ -13,7 +13,7 @@ Kokoro-82M voice model and voices (kokoro-v1.0.int8.onnx, voices-v1.0.bin)
   Downloaded from: https://github.com/thewh1teagle/kokoro-onnx/releases (model-files-v1.0),
   checked with SHA-256 before use.
 
-Installed with pip into plugins/SinosDoMundo/python-env
+Installed with pip into plugins/WorldAchievementAnnouncer/python-env
 -------------------------------------------------------
 kokoro-onnx       - https://github.com/thewh1teagle/kokoro-onnx         - MIT License
   (pulls in onnxruntime - MIT, espeakng-loader / espeak-ng - GPL-3.0,

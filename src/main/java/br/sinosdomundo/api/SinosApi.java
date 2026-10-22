@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * API para outros plugins. Use {@code SinosApi.get()} depois que o SinosDoMundo estiver ativo
- * (coloque {@code depend} ou {@code softdepend: [SinosDoMundo]} no seu plugin.yml).
+ * API para outros plugins. Use {@code SinosApi.get()} depois que o World Achievement Announcer estiver ativo
+ * (coloque {@code depend} ou {@code softdepend: [WorldAchievementAnnouncer]} no seu plugin.yml).
  *
  * <pre>{@code
  * SinosApi sinos = SinosApi.get();
@@ -21,7 +21,7 @@ public interface SinosApi {
     static SinosApi get() {
         SinosApi api = Holder.instance;
         if (api == null) {
-            throw new IllegalStateException("SinosDoMundo não está ativo");
+            throw new IllegalStateException("World Achievement Announcer não está ativo");
         }
         return api;
     }
@@ -49,7 +49,7 @@ public interface SinosApi {
      */
     CompletableFuture<Void> registerPhrase(String spoken);
 
-    /** Guarda a instância ativa. Uso interno do SinosDoMundo. */
+    /** Guarda a instância ativa. Uso interno do plugin. */
     final class Holder {
         private static volatile SinosApi instance;
 

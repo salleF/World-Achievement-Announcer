@@ -49,7 +49,7 @@ public final class Lang {
     }
 
     /**
-     * Carrega o idioma. Os arquivos que vêm no plugin são copiados para plugins/SinosDoMundo/lang na primeira vez;
+     * Carrega o idioma. Os arquivos que vêm no plugin são copiados para plugins/WorldAchievementAnnouncer/lang na primeira vez;
      * traduções que faltarem no arquivo do admin vêm do arquivo do plugin.
      */
     public static void load(Plugin plugin, String language) {

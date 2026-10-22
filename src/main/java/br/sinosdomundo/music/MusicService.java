@@ -31,7 +31,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 /**
- * Música própria do admin: arquivos em plugins/SinosDoMundo/musicas, convertidos para OGG mono pelo
+ * Música própria do admin: arquivos em plugins/WorldAchievementAnnouncer/musicas, convertidos para OGG mono pelo
  * scripts/musica.py (Python), com análise dos ataques para sugerir o ritmo das batidas e prévia só para o admin.
  */
 public final class MusicService {
@@ -79,7 +79,7 @@ public final class MusicService {
         if (!readme.exists()) {
             try {
                 Files.writeString(readme.toPath(), br.sinosdomundo.Lang.t(String.join(System.lineSeparator(),
-                        "Coloque aqui as músicas que quer usar nos anúncios do SinosDoMundo.",
+                        "Coloque aqui as músicas que quer usar nos anúncios do World Achievement Announcer.",
                         "",
                         "Formatos aceitos: .ogg, .mp3, .wav e .flac.",
                         "Depois, no jogo: /sinos > Música > Colocar música própria > Atualizar lista.",

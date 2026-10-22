@@ -1,5 +1,6 @@
 plugins {
     java
+    id("com.gradleup.shadow") version "9.3.1"
 }
 
 group = "br.sinosdomundo"
@@ -15,6 +16,8 @@ repositories {
 dependencies {
     // Compila contra a 1.21.4 para rodar em servidores 1.21.4+ e 26.x
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    // Estatísticas anônimas de uso (bStats), embutidas no jar
+    implementation("org.bstats:bstats-bukkit:3.2.1")
 
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -37,4 +40,23 @@ tasks.processResources {
     filesMatching("plugin.yml") {
         expand(props)
     }
+}
+
+// O jar final é o do Shadow (com o bStats dentro, em outro pacote para não conflitar com outros plugins)
+tasks.shadowJar {
+    archiveBaseName.set("WorldAchievementAnnouncer")
+    archiveClassifier.set("")
+    configurations = project.configurations.runtimeClasspath.map { setOf(it) }
+    dependencies {
+        exclude { it.moduleGroup != "org.bstats" }
+    }
+    relocate("org.bstats", "br.sinosdomundo.bstats")
+}
+
+tasks.jar {
+    archiveClassifier.set("plain")
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }

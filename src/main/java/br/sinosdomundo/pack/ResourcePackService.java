@@ -187,7 +187,7 @@ public final class ResourcePackService {
         }
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         try (ZipOutputStream out = new ZipOutputStream(buffer)) {
-            put(out, "pack.mcmeta", packMeta("SinosDoMundo: " + name).toString().getBytes(StandardCharsets.UTF_8));
+            put(out, "pack.mcmeta", packMeta("World Achievement Announcer: " + name).toString().getBytes(StandardCharsets.UTF_8));
             for (Map.Entry<String, byte[]> file : files.entrySet()) {
                 put(out, file.getKey(), file.getValue());
             }
@@ -253,7 +253,7 @@ public final class ResourcePackService {
     private byte[] build() throws IOException {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         try (ZipOutputStream out = new ZipOutputStream(buffer)) {
-            put(out, "pack.mcmeta", packMeta("SinosDoMundo: sino 3D e voz").toString().getBytes(StandardCharsets.UTF_8));
+            put(out, "pack.mcmeta", packMeta("World Achievement Announcer: sino 3D e voz").toString().getBytes(StandardCharsets.UTF_8));
 
             for (String path : BASE_FILES) {
                 try (InputStream in = plugin.getResource("pacote/" + path)) {
@@ -310,7 +310,7 @@ public final class ResourcePackService {
         return buffer.toByteArray();
     }
 
-    /** A música do admin (plugins/SinosDoMundo/musica/conquista.ogg) ou a padrão do plugin. */
+    /** A música do admin (plugins/WorldAchievementAnnouncer/musica/conquista.ogg) ou a padrão do plugin. */
     private byte[] musicFile() throws IOException {
         File custom = new File(plugin.getDataFolder(), "musica/conquista.ogg");
         if (custom.isFile()) {

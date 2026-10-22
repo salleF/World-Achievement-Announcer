@@ -1,4 +1,4 @@
-"""Gera os áudios da voz do SinosDoMundo.
+"""Gera os áudios da voz do World Achievement Announcer.
 
 O plugin chama este script como um programa separado, uma vez por narrador:
   python gerar_voz.py --motor piper  --modelo <voz.onnx> --saida <pasta>
